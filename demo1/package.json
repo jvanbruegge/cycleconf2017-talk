@@ -1,0 +1,22 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --colors --compilers ts:ts-node/register *.test.ts",
+    "verify1": "mocha --colors --compilers ts:ts-node/register *1.test.ts",
+    "verify2": "mocha --colors --compilers ts:ts-node/register *2.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.8",
+    "jsverify": "^0.8.0",
+    "mocha": "^3.2.0",
+    "ts-node": "^3.0.0",
+    "typescript": "^2.2.1"
+  }
+}
