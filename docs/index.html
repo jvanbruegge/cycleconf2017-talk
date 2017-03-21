@@ -22,6 +22,10 @@
 		</script>
 	</head>
 	<body>
+
+        <style>
+      </style>
+
 		<div class="reveal">
 			<div class="slides">
 				<section>Why do we test?</section>
@@ -29,8 +33,32 @@
 				<section>
                     <blockquote>
                         <p>Testing can only show the presence, not the absence of bugs.</p>
-                        <footer>- Edsger W. Dijkstra</footer>
+                        <cite>Edsger W. Dijkstra</cite>
                     </blockquote>
+                </section>
+
+                <section>
+                    <h1>Property based testing</h1>
+                    <h2>with Cycle.js</h2>
+                    <p>Jan van Brügge</p>
+                </section>
+
+                <section>
+                    <p>What can we do about that?</p>
+
+                    <p class="fragment fade-in">More tests!</p>
+                </section>
+
+                <section>
+                    How can we save us from even more work?
+                    <p class="fragment fade-in">Do not write unit tests!</p>
+                    <p class="fragment fade-in">Generate them</p>
+                </section>
+
+                <section>
+                    <img src="https://raw.githubusercontent.com/jsverify/jsverify/master/jsverify-300.png" class="stretch" />
+                    <h2>JSVerify</h2>
+                    <p>Write powerful and concise tests.</p>
                 </section>
 
 			</div>
@@ -43,6 +71,13 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+                slideNumber: true,
+                controls: false,
+
+                math: {
+                    mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                },
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
