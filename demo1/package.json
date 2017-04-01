@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --colors --compilers ts:ts-node/register *.test.ts",
     "verify1": "mocha --colors --compilers ts:ts-node/register *1.test.ts",
     "verify2": "mocha --colors --compilers ts:ts-node/register *2.test.ts"
   },
