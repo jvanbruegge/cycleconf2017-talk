@@ -1,0 +1,11 @@
+.horizontal {
+    display: inline-block;
+}
+
+.big {
+    font-size: 2em !important;
+}
+
+.yellow {
+    color: yellow !important;
+}
