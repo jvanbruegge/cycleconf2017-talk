@@ -86,6 +86,37 @@
                     <h4 class="fragment fade-in" style="margin-top: 2em;">Any problem with this property?</h4>
                 </section>
 
+                <section>
+                    <h3>add.ts</h3>
+                    <pre><code data-trim class="typescript">
+                        function add(a : number, b : number) {
+                            return a + b;
+                        }
+                    </code></pre>
+                    <h3>add.test.ts</h3>
+                    <pre><code data-trim class="typescript">
+                        const property = forall(integer, integer, () => {
+                            return add(a, b) === a + b;
+                        }
+                    </code></pre>
+                    <h4 class="fragment fade-in">We just <span class="yellow">reimplemented</span> the function!</h4>
+                </section>
+
+                <section>
+                    <h3>Other properties we could use</h3>
+                    <ul>
+                        <li class="fragment fade-in"><span class="yellow">Identity</span>: \(\forall a \in \mathbb Z : add(a, 0) = a = add(0, a)\)</li>
+                        <li class="fragment fade-in"><span class="yellow">Negation</span>: \(\forall a \in \mathbb Z : add(a, -a) = 0 = add(-a, a)\)</li>
+                        <li class="fragment fade-in"><span class="yellow">Commutative</span>: \(\forall a,b \in \mathbb Z : add(a, b) = add(b, a)\)</li>
+                        <li class="fragment fade-in"><span class="yellow">Associative</span>: \(\forall a,b,c \in \mathbb Z : add(add(a, b), c) = add(a, add(b, c))\)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Translated into code:</h3>
+                    <a href="../demo2">Demo</a>
+                </section>
+
                 <!--<section>
                     <h3>Arbitrary generators</h3>
                     <p>Objects that generate random values of a certain kind</p>

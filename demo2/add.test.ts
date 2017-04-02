@@ -4,24 +4,42 @@ import { add } from './add';
 
 const testOptions : Options = {
     size: 200,
-    quiet: false
+    quiet: true
 };
 
 describe('add tests', () => {
+    
+    it('Identity', () => {
 
-    it('positive and negative should equal zero', () => {
+        const property = forall(integer, a => {
+            return add(a, 0) === a && add(0, a) === a;
+        });
+        assert(property, testOptions);
 
-        const property = forall(integer, n => {
-            return add(n, -n) === 0 && add(-n, n) === 0;
+    });
+
+    it('Negation', () => {
+
+        const property = forall(integer, a => {
+            return add(a, -a) === 0 && add(-a, a) === 0;
+        });
+        assert(property, testOptions);
+
+    });
+
+    it('Commutative', () => {
+
+        const property = forall(integer, integer, (a, b) => {
+            return add(a, b) === add(b, a);
         });
         assert(property, testOptions);
 
     });
     
-    it('adding zero should not change number', () => {
+    it('Associative', () => {
 
-        const property = forall(integer, n => {
-            return add(n, 0) === n && add(0, n) === n;
+        const property = forall(integer, integer, integer, (a, b, c) => {
+            return add(add(a, b), c) === add(a, add(b, c));
         });
         assert(property, testOptions);
 
