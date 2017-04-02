@@ -1,11 +1,10 @@
 {
-  "name": "demo1",
+  "name": "demo2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --colors --compilers ts:ts-node/register add.test.ts",
-    "property": "mocha --colors --compilers ts:ts-node/register add.prop.test.ts"
+    "test": "mocha --colors --compilers ts:ts-node/register *.test.ts"
   },
   "keywords": [],
   "author": "",

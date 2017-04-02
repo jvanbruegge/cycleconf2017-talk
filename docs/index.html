@@ -77,6 +77,15 @@
                     <a href="../demo1">Demo</a>
                 </section>
 
+                <section>
+                    <h2>What did we just see?</h2>
+                    <ul>
+                        <li class="fragment fade-in">An <span class="yellow">arbitrary</span> to generate random values</li>
+                        <li class="fragment fade-in">A <span class="yellow">property</span>: \(\forall a,b \in \mathbb Z : add(a, b) = a + b\)</li>
+                    </ul>
+                    <h4 class="fragment fade-in" style="margin-top: 2em;">Any problem with this property?</h4>
+                </section>
+
                 <!--<section>
                     <h3>Arbitrary generators</h3>
                     <p>Objects that generate random values of a certain kind</p>
@@ -108,11 +117,13 @@
 
                 math: {
                     mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
-                    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                    config: 'TeX-AMS_HTML-full',  // See http://docs.mathjax.org/en/latest/config-files.html
+                    tex2jax: {inlineMath: [['\\(','\\)']]}
                 },
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
+                    { src: 'plugin/math/math.js', async: true },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },

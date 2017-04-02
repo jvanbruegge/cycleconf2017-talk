@@ -1,6 +1,11 @@
-import { forall, integer, assert } from 'jsverify';
+import { forall, integer, assert, Options } from 'jsverify';
 
 import { add } from './add';
+
+const testOptions : Options = {
+    size: 200,
+    quiet: false
+};
 
 describe('add tests', () => {
 
@@ -9,7 +14,7 @@ describe('add tests', () => {
         const property = forall(integer, n => {
             return add(n, -n) === 0 && add(-n, n) === 0;
         });
-        assert(property);
+        assert(property, testOptions);
 
     });
     
@@ -18,9 +23,7 @@ describe('add tests', () => {
         const property = forall(integer, n => {
             return add(n, 0) === n && add(0, n) === n;
         });
-        assert(property, {
-            size: 200
-        });
+        assert(property, testOptions);
 
     });
 
