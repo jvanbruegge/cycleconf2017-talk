@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "cycle-scripts-one-fits-all": "file:///home/jan/Dokumente/Programmierprojekte/create-cycle-app-flavors/packages/cycle-scripts-one-fits-all"
+    "cycle-scripts-one-fits-all": "^2.0.0"
   },
   "dependencies": {
     "@cycle/dom": "^17.1.0",
