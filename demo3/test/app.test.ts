@@ -19,9 +19,9 @@ describe('app tests', () => {
 
     const expectedHTML = count => `
         <div>
-            { ... }
+            {{ ... }}
             <span>Counter: ${count}</span>
-            { ... }
+            {{ ... }}
         </div>
     `;
 
